@@ -24,9 +24,9 @@ def bubbleSort(arr):
     return arr
 
 
-# heap sort algorithm
+# insertion sort algorithm
 
-def heapSort(arr):
+def insertionSort(arr):
     # iterate over whole array
     for i in range(1, len(arr)):
         # get the value that needs to be inserted
