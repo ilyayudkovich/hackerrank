@@ -27,7 +27,7 @@ def bubbleSort(arr):
 # heap sort algorithm
 
 def heapSort(arr):
-    # get the length of the array
+    # iterate over whole array
     for i in range(1, len(arr)):
         # get the value that needs to be inserted
         val = arr[i]
@@ -43,4 +43,22 @@ def heapSort(arr):
         # update the value
         arr[pos] = val
 
+
+# quick sort algorithm
+
+def quickSort(arr):
+    # if it's one element
+    if len(arr) <= 1:
+        # return it
+        return arr
+    # otherwise
+    else:
+        # select pivot as first element 
+        pivot = arr[0]
+        # select all elements less/equal than it
+        less_than = [i for i in arr[1:] if i <= pivot]
+        # select all elements greater than it
+        greater_than = [i for i in arr[1:] if i > pivot]
+        # return the quick sort of less_than, plus pivot, plus greater_than
+        return quickSort(less_than) + pivot + quickSort(greater_than)
 
