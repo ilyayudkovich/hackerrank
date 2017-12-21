@@ -4,6 +4,11 @@ class Node(object):
         self.next_node = next_node
         self.prev_node = prev_node 
 
+def display(head):
+    while head:
+        print(head.data)
+        head = head.next
+
 # find the node where two linked lists merge
 def FindMergeNode(headA, headB):
     # keep a list of all seen nodes
